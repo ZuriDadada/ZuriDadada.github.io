@@ -34,6 +34,10 @@ body {
     linear-gradient(180deg, #f8f2ea 0%, #f0e7dc 100%);
 }
 
+html[lang="zh-Hant"] body {
+  font-family: "Taipei Sans TC", "Noto Sans TC", sans-serif;
+}
+
 .page-shell {
   width: min(760px, 100%);
 }
