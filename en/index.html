@@ -22,13 +22,38 @@
     <div class="page-shell">
       <header class="header-top">
         <div class="logo">N</div>
-        <a
-          class="lang-toggle"
-          href="/zh-hant/"
-          aria-label="Switch to Traditional Chinese"
-        >
-          <span class="lang-text">繁中</span>
-        </a>
+        <div class="language-switcher">
+          <button
+            class="lang-toggle"
+            type="button"
+            aria-label="Choose website language"
+            aria-expanded="false"
+            aria-controls="language-menu"
+          >
+            <span class="current-language">English</span>
+            <span class="language-arrow" aria-hidden="true">▾</span>
+          </button>
+
+          <nav
+            class="language-menu"
+            id="language-menu"
+            aria-label="Choose language"
+            hidden
+          >
+            <a class="language-option" href="/en/" aria-current="page">
+              <span>English</span>
+              <span class="language-check" aria-hidden="true">✓</span>
+            </a>
+            <a class="language-option" href="/zh-hans/">
+            <span>简体中文</span>
+              <span class="language-check" aria-hidden="true">✓</span>
+            </a>
+            <a class="language-option" href="/zh-hant/">
+              <span>繁體中文</span>
+              <span class="language-check" aria-hidden="true">✓</span>
+            </a>
+          </nav>
+        </div>
       </header>
 
       <div class="hero">
