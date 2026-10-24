@@ -68,24 +68,106 @@ html[lang="zh-Hans"] body {
   box-shadow: 0 8px 20px rgba(139, 94, 60, 0.12);
 }
 
+
+/* Language switcher */
+.language-switcher {
+  position: relative;
+}
+
 .lang-toggle {
-  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 13px;
   border: 1px solid var(--line);
   border-radius: 20px;
   background: var(--panel-strong);
   color: var(--primary);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.lang-toggle:hover {
+.lang-toggle:hover,
+.lang-toggle[aria-expanded="true"] {
   background: linear-gradient(135deg, #f1d7b7 0%, #dcb08a 100%);
-  color: var(--panel-strong);
+  color: var(--text);
   box-shadow: 0 6px 16px rgba(139, 94, 60, 0.15);
 }
+
+.lang-toggle:focus-visible,
+.language-option:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.language-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.lang-toggle[aria-expanded="true"] .language-arrow {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 100;
+  min-width: 190px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel-strong);
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.language-menu[hidden] {
+  display: none;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.language-option:hover {
+  background: rgba(219, 180, 130, 0.22);
+  color: var(--primary);
+}
+
+.language-option[aria-current="page"] {
+  background: rgba(219, 180, 130, 0.2);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.language-check {
+  visibility: hidden;
+  font-weight: 700;
+}
+
+.language-option[aria-current="page"] .language-check {
+  visibility: visible;
+}
+
 
 /* Hero */
 .hero {
