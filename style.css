@@ -38,6 +38,10 @@ html[lang="zh-Hant"] body {
   font-family: "Taipei Sans TC", "Noto Sans TC", sans-serif;
 }
 
+html[lang="zh-Hans"] body {
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+}
+
 .page-shell {
   width: min(760px, 100%);
 }
