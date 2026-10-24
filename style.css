@@ -205,6 +205,10 @@ h1 {
 .links a {
   display: inline-block;
   padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
   border-radius: 999px;
   text-decoration: none;
   color: var(--panel-strong);
