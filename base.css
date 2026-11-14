@@ -1,0 +1,52 @@
+/* Nodals — Shared Base Styles */
+
+:root {
+    --bg: #f6efe6;
+    --panel: rgba(255, 250, 244, 0.85);
+    --panel-strong: #fffaf3;
+    --primary: #8b5e3c;
+    --primary-soft: #d9b792;
+    --text: #3f2f29;
+    --muted: #745d52;
+    --line: rgba(105, 79, 61, 0.2);
+    --shadow: rgba(95, 65, 45, 0.15);
+    --accent: #c9956e;
+}
+
+/* Basic reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global appearance */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255, 255, 255, 0.9),
+            transparent 40%
+        ),
+        linear-gradient(
+            180deg,
+            #f8f2ea 0%,
+            #f0e7dc 100%
+        );
+}
+
+/* Traditional Chinese */
+html[lang="zh-Hant"] body {
+    font-family: "Taipei Sans TC", "Noto Sans TC", sans-serif;
+}
+
+/* Simplified Chinese */
+html[lang="zh-Hans"] body {
+    font-family: "Noto Sans SC", "Noto Sans", sans-serif;
+}
